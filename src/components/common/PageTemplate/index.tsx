@@ -1,4 +1,5 @@
 import type { ReactNode } from 'react';
+import Footer from '../Footer';
 import Header from '../Header';
 import { PageChildBox, PageContainer, PageLayout } from './styles';
 
@@ -15,7 +16,7 @@ export default function PageTemplate({ children }: Props) {
         <PageChildBox>{children}</PageChildBox>
       </PageLayout>
 
-      <div>Footer</div>
+      <Footer />
     </PageContainer>
   );
 }
