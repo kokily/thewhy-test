@@ -27,35 +27,38 @@ const GlobalStyle = createGlobalStyle`
   }
   @font-face {
     font-family: '윤고딕310';
-    src: url('/fonts/윤고딕310.ttf');
+    src: url('/fonts/YDIYGO310.woff');
+    src: url('/fonts/YDIYGO310.woff2');
   }
   @font-face {
     font-family: '윤고딕320';
-    src: url('/fonts/윤고딕320.ttf');
+    src: url('/fonts/YDIYGO320.woff');
+    src: url('/fonts/YDIYGO320.woff2');
   }
   @font-face {
     font-family: '윤고딕330';
-    src: url('/fonts/윤고딕330.ttf');
+    src: url('/fonts/YDIYGO330.woff');
+    src: url('/fonts/YDIYGO330.woff2');
   }
   @font-face {
     font-family: '윤고딕340';
-    src: url('/fonts/윤고딕340.ttf');
+    src: url('/fonts/YDIYGO340.woff');
+    src: url('/fonts/YDIYGO340.woff2');
   }
   @font-face {
     font-family: '윤고딕350';
-    src: url('/fonts/윤고딕350.ttf');
+    src: url('/fonts/YDIYGO350.woff');
+    src: url('/fonts/YDIYGO350.woff2');
   }
   @font-face {
-    font-family: 'Fuggles-Regular';
-    src: url('/fonts/Fuggles-Regular.ttf');
+    font-family: '윤고딕360';
+    src: url('/fonts/YDIYGO360.woff');
+    src: url('/fonts/YDIYGO360.woff2');
   }
   @font-face {
     font-family: 'DancingScript-Regular';
-    src: url('/fonts/DancingScript-Regular.ttf');
-  }
-  @font-face {
-    font-family: 'NanumGothic-Regular';
-    src: url('/fonts/NanumGothic-Regular.ttf');
+    src: url('/fonts/DancingScript-Regular.woff');
+    src: url('/fonts/DancingScript-Regular.woff2');
   }
   @-webkit-keyframes mask5Up {
     from {
