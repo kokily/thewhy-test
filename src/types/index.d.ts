@@ -43,3 +43,9 @@ interface OutlineType {
     }[];
   }[];
 }
+
+// Notices API
+interface AddNoticePayload {
+  title: string;
+  body: string;
+}

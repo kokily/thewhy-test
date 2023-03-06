@@ -1,16 +1,23 @@
-import { Admin } from '.prisma/client';
+import { Question } from '.prisma/client';
 import { PrismaClient } from '@prisma/client';
-import prevData from './Admin.json';
+import prevData from './question.json';
 
 const db = new PrismaClient();
 
 async function seed() {
   function getData() {
-    const data: Admin[] = prevData.map((admin) => {
+    const data: Question[] = prevData.map((data) => {
       return {
-        id: admin.id,
-        password: admin.password,
-        createdAt: new Date(admin.createdAt),
+        id: data.id,
+        username: data.name,
+        password: data.password,
+        title: data.title,
+        body: data.body,
+        phone: data.phone,
+        email: data.email,
+        reply: data.reply,
+        createdAt: new Date(data.created_at),
+        updatedAt: new Date(data.updated_at),
       };
     });
 
@@ -19,7 +26,7 @@ async function seed() {
 
   await Promise.all(
     getData().map((data) => {
-      return db.admin.create({ data });
+      return db.question.create({ data });
     })
   );
 }
