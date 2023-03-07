@@ -13,6 +13,7 @@ export async function middleware(req: NextRequest, event: NextFetchEvent) {
 
 export const config = {
   matcher: [
+    '/notices/add',
     '/api/notices/add',
     '/api/notices/remove/:path*',
     '/api/notices/update/:path*',

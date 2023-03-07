@@ -29,7 +29,13 @@ export async function removeNoticeAPI(id: string) {
   return response.data;
 }
 
-export async function updateNoticesAPI(id: string, payload: AddNoticePayload) {
+export async function updateNoticesAPI({
+  id,
+  payload,
+}: {
+  id: string;
+  payload: AddNoticePayload;
+}) {
   const response = await axios.put<Notice>(
     `/api/notices/update/${id}`,
     payload
