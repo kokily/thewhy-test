@@ -49,3 +49,11 @@ interface AddNoticePayload {
   title: string;
   body: string;
 }
+
+// Stories API
+interface AddStoryPayload {
+  title: string;
+  body: string;
+  thumbnail: string;
+  tags: string[];
+}
