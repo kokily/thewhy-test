@@ -49,6 +49,7 @@ export default function useAddNotice() {
     try {
       if (!id) {
         // Add Notice
+        console.log(title, body);
         const response = await addNoticeMutate.mutateAsync({ title, body });
         await queryClient.clear();
         router.replace(`/notices/${response.id}`);

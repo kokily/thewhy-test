@@ -12,7 +12,7 @@ export default async function removeNoticeHandler(
       where: { id: parseInt(id) },
     });
 
-    res.status(204);
+    res.status(200).json({ message: 'Remove OK' });
   } else {
     res.status(400);
   }

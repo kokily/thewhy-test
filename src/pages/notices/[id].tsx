@@ -31,7 +31,7 @@ const ReadNoticePage: NextPage<Props> = ({ notice, description }) => {
 };
 
 export const getServerSideProps: GetServerSideProps = async ({ params }) => {
-  const id = params.id as string;
+  const id = params?.id as string;
   const notice = await db.notice.findUnique({
     where: { id: parseInt(id) },
   });

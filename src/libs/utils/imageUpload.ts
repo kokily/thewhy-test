@@ -6,16 +6,16 @@ export async function imageUpload(file: File): Promise<string> {
     type: file.type,
   });
 
+  const response = data.url
+    .split('?')[0]
+    .replace('s3.ap-northeast-2.amazonaws.com/', '');
+
   await axios.put(data.url, file, {
     headers: {
       'Content-Type': file.type,
       'Access-Control-Allow-Origin': '*',
     },
   });
-
-  const response = data.url
-    .split('?')[0]
-    .replace('s3.apnortheast-2.amazonaws.com/', '');
 
   return response;
 }

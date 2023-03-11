@@ -25,9 +25,9 @@ export default function useReadNotice() {
   const onRemoveNotice = async () => {
     try {
       await removeNoticeMutate.mutateAsync(id);
-      await queryClient.clear();
+      await queryClient.invalidateQueries(['notices', 'notice']);
       toast.success('공지사항 삭제');
-      router.replace('/notices');
+      await router.replace('/notices');
     } catch (err: any) {
       toast.error(err);
     }

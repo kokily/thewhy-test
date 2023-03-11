@@ -27,7 +27,7 @@ model Story {
 }
 
 model Notice {
-  id        Int      @id @unique @default(autoincrement())
+  id        Int      @id @default(autoincrement())
   title     String
   body      String
   createdAt DateTime @default(now())

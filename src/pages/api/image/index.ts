@@ -19,7 +19,7 @@ export default async function imageUploadHandler(
   if (req.method === 'POST') {
     const { name, type } = req.body;
     const Params = {
-      Bucket: 'image.thewhy.kr',
+      Bucket: 'image.dnkdream.com',
       Key: `${moment().format('YYYYMMDD_HHmmdd')}_${name.trim()}`,
       ContentType: type,
       ACL: 'public-read',
