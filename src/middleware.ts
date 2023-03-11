@@ -17,5 +17,9 @@ export const config = {
     '/api/notices/add',
     '/api/notices/remove/:path*',
     '/api/notices/update/:path*',
+    '/stories/add',
+    '/api/stories/add',
+    '/api/stories/remove/:path*',
+    '/api/stories/update/:path*',
   ],
 };
