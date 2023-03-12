@@ -23,6 +23,7 @@ export const config = {
     '/api/stories/update/:path*',
     '/questions/add',
     '/api/questions/remove/:path*',
-    '/api/questions/update/:path*',
+    '/api/reply/add/:path*',
+    '/api/reply/remove/:path*',
   ],
 };

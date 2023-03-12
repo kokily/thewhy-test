@@ -8,14 +8,14 @@ export default async function validPasswordHandler(
 ) {
   type RequestType = {
     password: string;
-    questionId: string;
+    id: string;
   };
 
-  const { password, questionId }: RequestType = req.body;
+  const { password, id }: RequestType = req.body;
 
   if (req.method === 'POST') {
     const question = await db.question.findUnique({
-      where: { id: questionId },
+      where: { id },
     });
 
     const valid = await bcrypt.compare(password, question.password);
