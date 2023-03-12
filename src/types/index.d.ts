@@ -57,3 +57,13 @@ interface AddStoryPayload {
   thumbnail: string;
   tags: string[];
 }
+
+// Questions API
+interface AddQuestionPayload {
+  username: string;
+  password: string;
+  title: string;
+  body: string;
+  phone: string;
+  email: string;
+}
