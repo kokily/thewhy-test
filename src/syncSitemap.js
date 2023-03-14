@@ -4,7 +4,7 @@ const prettier = require('prettier');
 
 const SitemapGeneratedDate = new Date().toISOString();
 
-const API_DOMAIN = 'http://localhost:3000/api';
+const API_DOMAIN = 'https://thewhy.kr/api';
 const FRONT_DOMAIN = 'https://thewhy.kr';
 
 const routes = [
