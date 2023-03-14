@@ -22,9 +22,9 @@ export default function Desktop() {
       <DesktopLead>
         다양한 요인들이 필요하겠지만
         <br />
-        "내가 하는 일의 전문가"가 되어 인정받는 것.
+        &quot;내가 하는 일의 전문가&quot;가 되어 인정받는 것.
         <br />
-        함께 하는 "동료와의 행복한 관계"가
+        함께 하는 &quot;동료와의 행복한 관계&quot;가
         <br />
         출근길의 발걸음을 조금 더 가볍게 만들지 않을까
         <br />

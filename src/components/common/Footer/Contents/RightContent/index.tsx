@@ -15,8 +15,8 @@ export default function RightContent() {
     <RightContainer>
       <RightTitle>회사소개</RightTitle>
       <RightLead>
-        더와이컨설팅은 행복한 삶을 꿈꾸는 "커뮤니케이션" 전문 교육 컨설팅
-        회사입니다.
+        더와이컨설팅은 행복한 삶을 꿈꾸는 &quot;커뮤니케이션&quot; 전문 교육
+        컨설팅 회사입니다.
       </RightLead>
       <RightLead>
         우리가 존재하는 이유는 커뮤니케이션을 통해 개인과 조직의 행복을 돕는

@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { ImLocation } from 'react-icons/im';
 import { AiOutlineMail } from 'react-icons/ai';
 import {
@@ -40,12 +41,12 @@ export default function LeftContent() {
       </LeftList>
 
       <LeftIconsBox>
-        <a href="/">
+        <Link href="/">
           <LeftIcon className="youtube" />
-        </a>
-        <a href="/">
+        </Link>
+        <Link href="/">
           <LeftIcon className="naver" />
-        </a>
+        </Link>
       </LeftIconsBox>
     </LeftContainer>
   );

@@ -13,7 +13,13 @@ export default function FooterCopyrightItem() {
 
   const Logo = () => (
     <Link href="/">
-      <Image src="/images/logo2.png" width={66} height={32} alt="Logo" />
+      <Image
+        src="/images/logo2.png"
+        width={66}
+        height={32}
+        alt="Logo"
+        priority
+      />
     </Link>
   );
 
@@ -40,7 +46,7 @@ export default function FooterCopyrightItem() {
       <EtcLinkList>
         <li>
           <MdKeyboardArrowRight />
-          <Link href="/faq">FAQ's</Link>
+          <Link href="/faq">FAQ&apos;s</Link>
         </li>
         <li>
           <MdKeyboardArrowRight />
