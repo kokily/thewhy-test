@@ -26,7 +26,7 @@ const SearchBox = styled.div<{ small: boolean }>`
     `}
 `;
 
-const Button = styled.a`
+const Button = styled.button`
   height: 40px;
   font-family: '윤고딕320';
   font-size: 1rem;
