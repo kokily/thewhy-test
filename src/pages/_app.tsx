@@ -71,6 +71,8 @@ export default function App({
           <ReactQueryDevtools initialIsOpen={false} />
         </QueryClientProvider>
 
+        <script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=cec30f2d8f996a53cca24b45925dea37&libraries=services" />
+
         <ToastContainer position="bottom-right" draggable={false} />
       </SessionProvider>
     </>
