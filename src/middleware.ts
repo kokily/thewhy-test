@@ -21,7 +21,6 @@ export const config = {
     '/api/stories/add',
     '/api/stories/remove/:path*',
     '/api/stories/update/:path*',
-    '/questions/add',
     '/api/questions/remove/:path*',
     '/api/reply/add/:path*',
     '/api/reply/remove/:path*',
