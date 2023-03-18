@@ -17,7 +17,9 @@ export default function HeaderTopRight() {
       {status === 'authenticated' ? (
         <span
           className="logout"
-          onClick={async () => await signOut({ callbackUrl: '/' })}
+          onClick={async () =>
+            await signOut({ callbackUrl: 'https://thewhy.kr' })
+          }
         >
           <BiExit size={32} color="#463884" />
         </span>

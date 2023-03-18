@@ -7,8 +7,10 @@ import useLocalStorage from 'use-local-storage';
 import useMobile from '@/libs/hooks/useMobile';
 import useObserver from '@/libs/hooks/useObserver';
 import { listQuestionsAPI } from '../questionsApi';
+import { useSession } from 'next-auth/react';
 
 export default function useListQuestions() {
+  const { status } = useSession();
   const router = useRouter();
   const queryClient = useQueryClient();
   const [scrollY, setScrollY] = useLocalStorage('listQuestionsScroll', 0);
@@ -72,5 +74,6 @@ export default function useListQuestions() {
     onReadQuestion,
     setTarget,
     isMobile,
+    isAdmin: status === 'authenticated',
   };
 }
