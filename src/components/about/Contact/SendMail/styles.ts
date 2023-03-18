@@ -1,3 +1,4 @@
+import { media } from '@/styles';
 import styled, { css } from 'styled-components';
 
 const Container = styled.div`
@@ -21,6 +22,10 @@ const Container = styled.div`
     line-height: 26px;
     color: #777;
     margin-bottom: 1.5rem;
+  }
+
+  ${media.small} {
+    margin-bottom: 4rem;
   }
 `;
 

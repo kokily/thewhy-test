@@ -11,9 +11,9 @@ export default function ListQuestions() {
     <Container>
       <Contents>
         <SearchBox small={questionHooks.isMobile}>
-          {!questionHooks.isMobile && questionHooks.isAdmin && (
+          {!questionHooks.isMobile && (
             <Link href="/questions/add">
-              <Button>글 작성</Button>
+              <Button>문의 작성</Button>
             </Link>
           )}
 

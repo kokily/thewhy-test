@@ -49,6 +49,8 @@ const FooterContentsContents = styled.div`
   ${media.small} {
     display: block;
     text-align: center;
+    padding-bottom: 0.4rem;
+    margin-bottom: 0;
   }
 `;
 

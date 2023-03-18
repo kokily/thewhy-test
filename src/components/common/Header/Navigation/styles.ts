@@ -24,8 +24,8 @@ const NavigationMobileWrapper = styled.div`
 const NavigationMobile = styled.div`
   display: flex;
   justify-content: flex-end;
-  margin-top: 20px;
-  padding: 15px;
+  padding-top: 15px;
+  padding-right: 15px;
   height: 60px;
   transition: 0.2s all;
   width: 100%;

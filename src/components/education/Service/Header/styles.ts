@@ -11,6 +11,9 @@ const Container = styled.div`
     padding-left: 1rem;
     padding-right: 1rem;
   }
+  ${media.small} {
+    margin-top: 0px;
+  }
 `;
 
 const Title = styled.h2`

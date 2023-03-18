@@ -15,6 +15,11 @@ const HeaderTopContainer = styled.div`
   ${media.medium} {
     justify-content: center;
   }
+  ${media.small} {
+    img {
+      width: 210px;
+    }
+  }
   img {
     cursor: pointer;
   }
