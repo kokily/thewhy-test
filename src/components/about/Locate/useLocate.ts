@@ -1,37 +1,38 @@
-import { useRef, useEffect } from 'react';
+import { useEffect } from 'react';
 
-export default function useLocate() {
-  const kakaoMap = useRef<HTMLDivElement>(null);
+declare global {
+  interface Window {
+    kakao: any;
+  }
+}
 
+interface Props {
+  latitude: number;
+  longitude: number;
+}
+
+export default function useLocate({ latitude, longitude }: Props) {
   useEffect(() => {
-    if (kakaoMap && kakaoMap.current) {
-      const coords = new (window as any).daum.maps.LatLng(
-        37.613030445578595,
-        127.1535812801483
-      );
-      const options = { center: coords, level: 2 };
-      const map = new (window as any).daum.maps.Map(kakaoMap.current, options);
-      const marker = new (window as any).daum.maps.Marker({
-        position: coords,
-        map,
+    const $script = document.createElement('script');
+
+    $script.async = true;
+    $script.src = `//dapi.kakao.com/v2/maps/sdk.js?appKey=${process.env.NEXT_PUBLIC_KAKAOMAP_APP_KEY}&autoload=false`;
+
+    document.head.appendChild($script);
+
+    const onLoadMap = () => {
+      window.kakao.maps.load(() => {
+        const container = document.getElementById('map');
+        const options = {
+          center: new window.kakao.maps.LatLng(latitude, longitude),
+          level: 2,
+        };
+        new window.kakao.maps.Map(container, options);
       });
-      const mapTypeControl = new (window as any).daum.maps.MapTypeControl();
-      const zoomControl = new (window as any).daum.maps.ZoomControl();
+    };
 
-      // Moving Center
-      map.relayout();
-      map.setCenter(coords);
-      marker.setPosition(coords);
-      map.addControl(
-        mapTypeControl,
-        (window as any).kakao.maps.ControlPosition.TOPRIGHT
-      );
-      map.addControl(
-        zoomControl,
-        (window as any).daum.maps.ControlPosition.RIGHT
-      );
-    }
-  }, [kakaoMap]);
+    $script.addEventListener('load', onLoadMap);
 
-  return kakaoMap;
+    return () => $script.removeEventListener('load', onLoadMap);
+  }, [latitude, longitude]);
 }

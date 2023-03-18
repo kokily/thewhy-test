@@ -2,12 +2,12 @@ import { Container, MapContainer, MapPane } from './styles';
 import useLocate from './useLocate';
 
 export default function Locate() {
-  const kakaoMap = useLocate();
+  useLocate({ latitude: 37.613030445578595, longitude: 127.1535812801483 });
 
   return (
     <Container>
       <MapContainer>
-        <MapPane className="map" ref={kakaoMap} />
+        <MapPane id="map" />
       </MapContainer>
     </Container>
   );
