@@ -39,6 +39,9 @@ const authOptions: NextAuthOptions = {
       },
     }),
   ],
+  pages: {
+    signOut: '/',
+  },
   secret: process.env.SECRET,
 };
 
