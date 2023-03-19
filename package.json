@@ -2,8 +2,10 @@
   "name": "thewhy",
   "version": "0.1.0",
   "private": true,
-  "scripts": {
-    "seed": "node --require esbuild-register prisma/seed.ts",
+  "prisma": {
+    "seed": "node --require esbuild-register prisma/seed.ts"
+  },
+  "scripts": {    
     "sitemap": "node src/syncSitemap.js",
     "dev": "next dev",
     "build": "next build",
